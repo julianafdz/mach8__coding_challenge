@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NBA Searcher</title>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body class="jumbotron d-flex align-items-center">
+        <div class="container-sm" style="background-color: black; text-align: center; color: white;">
+            <h1><i style="color: blue;">N</i><i>B</i><i style="color: red;">A</i><p>Searcher</p></h1>
+            </br>
+            <p>Please enter a numerical value</p>
+            <form action="{% url 'index' %}" method="post">
+                <div class="form-group col-4" style="margin: 20px auto;">
+                    <input autofocus class="form-control" type="number" name="user_input" placeholder="eg: 1,2,3...">
+                </div>
+                <input class="btn btn-primary" type="submit" value="Search">
+            </form>
+            </br>
+            <div>
+                {% if error %}
+                    <p>{{ error }}</p>
+                {% endif %}
+                {% if result != 0 %}
+                    <ul style="list-style-type:none">
+                        {% for player_pair in result %}
+                            <li>{{ player_pair.0.first_name }} {{ player_pair.0.last_name }} - {{ player_pair.1.first_name }} {{ player_pair.1.last_name }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No matches found</p>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>
