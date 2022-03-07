@@ -32,7 +32,7 @@ Finally, the search algorithm is based on a main iteration through the height di
 
 If the subtract (or result of the subtraction), is not found in the dictionary, the height (key) and therefore all the players that this key contains, are not used to make pairs with others (given the user's input).
 
-otherwise, if the subtract is found in the dictionary, I iterate through the list of players of each of the heights (keys), to create the pairs (I don't iterate doing a lookup, just to group the players into tuples).
+Otherwise, if the subtract is found in the dictionary, I iterate through the list of players of each of the heights (keys), to create the pairs (I don't iterate doing a lookup, just to group the players into tuples).
 
 Likewise, to avoid repeated data and time wasting, as a height (key) is revised or with which it has been paired, I add it to a list of keys that have already been revised, in order to avoid going back to go through it. With the latter, the iteration through the height dictionary becomes even shorter as it goes through the dictionary.
 
