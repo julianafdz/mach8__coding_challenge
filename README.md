@@ -4,7 +4,6 @@
 
 ### first install and activate your virtualenv
 - pip install virtualenv
-- pip install -r requirements.txt
 - virtualenv env
 - env/Scripts/activate (or source env/bin/activate)
 
@@ -15,5 +14,7 @@ https://github.com/julianafdz/mach8__coding_challenge.git
 - pip install -r requirements.txt
 
 ### Run project
-- move to project's folder
 - execute python manage.py runserver
+
+### Run Test
+- execute python manage.py test
