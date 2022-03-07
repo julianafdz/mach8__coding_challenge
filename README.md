@@ -2,7 +2,7 @@
 
 ## How to execute the app:
 
-### first install and activate your virtualenv
+### Install and activate your virtualenv
 - pip install virtualenv
 - virtualenv env
 - env/Scripts/activate (or source env/bin/activate)
